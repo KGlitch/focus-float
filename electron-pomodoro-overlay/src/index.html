@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: transparent;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+    }
+    .glass {
+      background: rgba(30, 30, 40, 0.7);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 32px 32px 24px 32px;
+      min-width: 320px;
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .titlebar {
+      width: 100%;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      -webkit-app-region: drag;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      background: transparent;
+    }
+    .close-btn, .min-btn {
+      -webkit-app-region: no-drag;
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 1.2em;
+      cursor: pointer;
+      padding: 0 12px;
+      height: 100%;
+      line-height: 28px;
+      outline: none;
+      border-radius: 6px;
+      transition: background 0.15s;
+    }
+    .close-btn:hover {
+      background: rgba(255, 60, 60, 0.25);
+      color: #ff4c4c;
+    }
+    .min-btn:hover {
+      background: rgba(255,255,255,0.12);
+      color: #ffd700;
+    }
+    #timer {
+      font-size: 2.8em;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin: 36px 0 18px 0;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      text-align: center;
+    }
+    .controls {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    button {
+      margin: 0;
+      padding: 7px 18px;
+      border-radius: 8px;
+      border: none;
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      font-size: 1em;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      -webkit-app-region: no-drag;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    button:hover {
+      background: #fff;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+  <div class="glass">
+    <div class="titlebar">
+      <button class="min-btn" id="min-btn" title="Minimieren">_</button>
+      <button class="close-btn" id="close-btn" title="Schließen">✕</button>
+    </div>
+    <div id="timer">25:00</div>
+    <div class="controls">
+      <button id="start">Start</button>
+      <button id="pause">Pause</button>
+      <button id="reset">Reset</button>
+    </div>
+  </div>
+  <script src="renderer-ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependency directories
+/bower_components/
+
+# Build output
+/dist/
+/release/
+/out/
+/build/
+/tmp/
+
+# Electron Builder cache
+/​electron-builder-cache/
+
+# OS-Dateien
+.DS_Store
+Thumbs.db
+
+# Editor- und IDE-Dateien
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Umgebungs­variablen
+.env
+.env.*.local
+
+# Debug-Dateien
+*.log
+*.tmp
+*.bak
+
+# Paketarchive
+*.zip
+*.tar.gz
+*.tgz
+
+# MacOS Finder-Tags
+.AppleDouble
+.LSOverride
+
+# Windows Thumbs.db & Recycle Bin
+Thumbs.db
+$RECYCLE.BIN/
+
+# Optional: aufgeräumte Lock-Dateien ignorieren, wenn du sie neu erzeugen kannst
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
