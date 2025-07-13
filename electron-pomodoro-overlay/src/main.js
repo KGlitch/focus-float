@@ -8,9 +8,11 @@ let isRunning = false;
 function createWindow() {
   mainWindow = new BrowserWindow({
     width: 400,
-    height: 200,
+    height: 260,
     frame: false,
     transparent: true,
+    backgroundColor: '#00000000',
+    hasShadow: false,
     alwaysOnTop: true,
     resizable: false,
     webPreferences: {
