@@ -18,7 +18,7 @@ function createWindow() {
     webPreferences: {
       contextIsolation: true,
       enableRemoteModule: false,
-      preload: __dirname + '/renderer.js'
+      preload: __dirname + '/preload.js'
     }
   });
 
