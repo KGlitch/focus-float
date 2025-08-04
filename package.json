@@ -2,7 +2,7 @@
   "name": "focus-float",
   "version": "1.0.0",
   "description": "A simple and elegant Pomodoro timer overlay for your desktop.",
-  "author": "Konrad",
+  "author": "Konrad Lange",
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
@@ -16,7 +16,12 @@
     "appId": "com.konrad.focusfloat",
     "productName": "FocusFloat",
     "mac": {
-      "category": "public.app-category.productivity"
+      "category": "public.app-category.productivity",
+      "icon": "build/icon.png"
+    },
+    "win": {
+      "icon": "build/icon.ico",
+      "target": "nsis"
     }
   }
 }
