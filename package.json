@@ -15,6 +15,10 @@
   "build": {
     "appId": "com.konrad.focusfloat",
     "productName": "FocusFloat",
+    "publish": {
+      "provider": "github",
+      "releaseType": "release"
+    },
     "mac": {
       "category": "public.app-category.productivity",
       "icon": "build/icon.png"
