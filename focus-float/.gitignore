@@ -16,35 +16,43 @@ lerna-debug.log*
 /out/
 /build/
 /tmp/
+*.dmg
+*.exe
+*.AppImage
+*.snap
+*.deb
+*.rpm
+*.pkg
 
 # Electron Builder cache
-/​electron-builder-cache/
+/electron-builder-cache/
+/node_modules/.cache/electron-builder/
 
-# OS-Dateien
+# OS Files
 .DS_Store
 Thumbs.db
 
-# Editor- und IDE-Dateien
+# Editor and IDE files
 .vscode/
 .idea/
 *.sublime-project
 *.sublime-workspace
 
-# Umgebungs­variablen
+# Environment variables
 .env
 .env.*.local
 
-# Debug-Dateien
+# Debug files
 *.log
 *.tmp
 *.bak
 
-# Paketarchive
+# Package archives
 *.zip
 *.tar.gz
 *.tgz
 
-# MacOS Finder-Tags
+# MacOS Finder Tags
 .AppleDouble
 .LSOverride
 
@@ -52,7 +60,7 @@ Thumbs.db
 Thumbs.db
 $RECYCLE.BIN/
 
-# Optional: aufgeräumte Lock-Dateien ignorieren, wenn du sie neu erzeugen kannst
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
+# Optional: ignore lock files if you can regenerate them
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
