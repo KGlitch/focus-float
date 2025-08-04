@@ -62,7 +62,7 @@ function createSettingsWindow() {
   }
   settingsWindow = new BrowserWindow({
     width: 380,
-    height: 480,
+    height: 510,
     frame: false,
     transparent: true,
     backgroundColor: '#00000000',

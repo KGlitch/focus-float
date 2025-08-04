@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <style>
@@ -18,15 +18,15 @@
       overflow: hidden;
     }
     .glass {
-      background: rgba(30, 30, 40, 0.85);
-      box-shadow: 0 4px 12px 0 rgba(31, 38, 135, 0.37);
+      background: rgba(30, 30, 40, 0.7);
+      box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.37);
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
       border-radius: 12px;
       border: 1px solid rgba(255,255,255,0.18);
-      padding: 24px;
+      padding: 32px;
       width: 320px;
-      min-height: 360px;
+      min-height: 420px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -34,18 +34,20 @@
     }
     h2 {
       width: 100%;
-      margin: -24px -24px 24px -24px;
-      padding: 16px;
+      margin: -20px 0 24px 0;
+      padding-top: 10px;
+      padding-bottom: 20px;
       color: #fff;
       text-align: center;
-      background: rgba(255,255,255,0.05);
-      border-top-left-radius: 12px;
-      border-top-right-radius: 12px;
+      background: transparent;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       -webkit-app-region: drag; /* Make the header draggable */
+      font-weight: bold;
+      font-size: 1.4em;
     }
     fieldset {
       width: 90%;
-      border: 1px solid rgba(255,255,255,0.3);
+      border: 1px solid rgba(255,255,255,0.25);
       margin-bottom: 16px;
       padding: 12px;
       color: #fff;
@@ -54,26 +56,29 @@
     legend {
       padding: 0 8px;
       font-weight: 500;
+      color: rgba(255,255,255,0.8);
     }
     label {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 10px 0;
+      margin: 12px 0;
       font-size: 1em;
     }
     input[type="number"] {
       width: 70px;
       margin-left: 8px;
-      background: rgba(0,0,0,0.3);
-      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(0,0,0,0.2);
+      border: 1px solid rgba(255,255,255,0.15);
       color: #fff;
-      padding: 4px 8px;
-      border-radius: 6px;
+      padding: 6px 8px;
+      border-radius: 8px;
       text-align: center;
+      font-size: 1em;
     }
     .actions {
-      margin-top: 16px;
+      margin-top: auto; /* Push actions to the bottom */
+      padding-top: 20px;
       width: 100%;
       display: flex;
       justify-content: flex-end;
@@ -97,32 +102,32 @@
       color: #222;
     }
     #cfg-save {
-      background: #4CAF50;
+      background: rgba(76, 175, 80, 0.5);
     }
     #cfg-save:hover {
-      background: #66BB6A;
+      background: #4CAF50;
       color: #fff;
     }
   </style>
 </head>
 <body>
   <div class="glass">
-    <h2>Einstellungen</h2>
+    <h2>Settings</h2>
     <fieldset>
-      <legend>Zeitintervalle</legend>
-      <label>Arbeit: <input type="number" id="cfg-work" min="1"> Min.</label>
-      <label>Kurze Pause: <input type="number" id="cfg-short" min="1"> Min.</label>
-      <label>Lange Pause: <input type="number" id="cfg-long" min="1"> Min.</label>
+      <legend>Time Intervals</legend>
+      <label>Work: <input type="number" id="cfg-work" min="1"> Min.</label>
+      <label>Short Break: <input type="number" id="cfg-short" min="1"> Min.</label>
+      <label>Long Break: <input type="number" id="cfg-long" min="1"> Min.</label>
     </fieldset>
     <fieldset>
-      <legend>Zyklus</legend>
-      <label>Zyklen bis lange Pause:
+      <legend>Cycle</legend>
+      <label>Cycles until long break:
         <input type="number" id="cfg-cycles" min="1">
       </label>
     </fieldset>
     <div class="actions">
-      <button id="cfg-cancel">Abbrechen</button>
-      <button id="cfg-save">Speichern</button>
+      <button id="cfg-cancel">Cancel</button>
+      <button id="cfg-save">Save</button>
     </div>
   </div>
   <script src="settings-renderer.js"></script>
